@@ -10,17 +10,18 @@ import Foundation
 
 class RepositoriImg {
     
-    typealias imgCallBack = ([ApiObjectImg]?, _ status: Bool, _ message: String) -> Void
-    var callBack:imgCallBack?
+    typealias imgCallBack =  ([ApiObjectImg]?, _ status: Bool, _ message: String) -> Void
+    
     let apiRest = ApiRestServices(urlServer: "https://raw.githubusercontent.com/dotnet-presentations/ContosoCrafts/master/src/wwwroot/data/products.json")
     
-    func fechimg() {
+    func fechimg( callBack:imgCallBack?) {
+        
             apiRest.getStats{ (apiObjectImg) in
                 guard let data = apiObjectImg else {
-                    self.callBack?(nil, false, "")
+                    callBack?(nil, false, "")
                     return
                 }
-                self.callBack?(data, true, "")
+                callBack?(data, true, "")
             }
         }
     

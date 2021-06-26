@@ -8,10 +8,9 @@
 
 import Foundation
 
-struct ApiObjectImg : Codable {
+struct ApiObjectImg : Codable, Identifiable {
     
-    
-    var Id: String
+    var id: String
     var Maker: String
     var img: String
     var Url: String
@@ -20,7 +19,7 @@ struct ApiObjectImg : Codable {
     
     
     enum CodingKeys: String, CodingKey {
-        case Id = "Id", Maker = "Maker",  img = "img", Url = "Url", Title = "Title", Description = "Description"
+        case id = "Id", Maker = "Maker",  img = "img", Url = "Url", Title = "Title", Description = "Description"
     }
   
 }
