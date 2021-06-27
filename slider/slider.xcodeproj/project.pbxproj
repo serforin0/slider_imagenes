@@ -20,6 +20,10 @@
 		F63CB22D26878A27006E142C /* ApiRestServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63CB22C26878A27006E142C /* ApiRestServices.swift */; };
 		F6CD897926879ABD0078F670 /* ApiObjectImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD897826879ABD0078F670 /* ApiObjectImg.swift */; };
 		F6CD897C26879FA60078F670 /* RepositoryImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD897B26879FA60078F670 /* RepositoryImg.swift */; };
+		F6F0A9FF2688CAD1005DD566 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F0A9FE2688CAD1005DD566 /* AsyncImage.swift */; };
+		F6F0AA012688CBA5005DD566 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F0AA002688CBA5005DD566 /* ImageLoader.swift */; };
+		F6F0AA032688CD15005DD566 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F0AA022688CD15005DD566 /* ImageCache.swift */; };
+		F6F0AA052688D3AD005DD566 /* EnvironmentValues_ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F0AA042688D3AD005DD566 /* EnvironmentValues_ImageCache.swift */; };
 		F7AADDE8F20DF5EF21BB977E /* Pods_slider_sliderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96FE042EC59A44C9876B3E8 /* Pods_slider_sliderUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +71,10 @@
 		F63CB22C26878A27006E142C /* ApiRestServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRestServices.swift; sourceTree = "<group>"; };
 		F6CD897826879ABD0078F670 /* ApiObjectImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiObjectImg.swift; sourceTree = "<group>"; };
 		F6CD897B26879FA60078F670 /* RepositoryImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImg.swift; sourceTree = "<group>"; };
+		F6F0A9FE2688CAD1005DD566 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		F6F0AA002688CBA5005DD566 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		F6F0AA022688CD15005DD566 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		F6F0AA042688D3AD005DD566 /* EnvironmentValues_ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValues_ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +153,7 @@
 		F63CB1F826877D1A006E142C /* slider */ = {
 			isa = PBXGroup;
 			children = (
+				F6F0A9FD2688CA49005DD566 /* AsyncImage */,
 				F63CB22A268788B9006E142C /* api */,
 				F63CB1F926877D1A006E142C /* AppDelegate.swift */,
 				F63CB1FB26877D1A006E142C /* SceneDelegate.swift */,
@@ -215,6 +224,17 @@
 				F6CD897B26879FA60078F670 /* RepositoryImg.swift */,
 			);
 			path = repositories;
+			sourceTree = "<group>";
+		};
+		F6F0A9FD2688CA49005DD566 /* AsyncImage */ = {
+			isa = PBXGroup;
+			children = (
+				F6F0A9FE2688CAD1005DD566 /* AsyncImage.swift */,
+				F6F0AA002688CBA5005DD566 /* ImageLoader.swift */,
+				F6F0AA022688CD15005DD566 /* ImageCache.swift */,
+				F6F0AA042688D3AD005DD566 /* EnvironmentValues_ImageCache.swift */,
+			);
+			path = AsyncImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,11 +476,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6F0A9FF2688CAD1005DD566 /* AsyncImage.swift in Sources */,
 				F63CB22D26878A27006E142C /* ApiRestServices.swift in Sources */,
 				F6CD897C26879FA60078F670 /* RepositoryImg.swift in Sources */,
+				F6F0AA032688CD15005DD566 /* ImageCache.swift in Sources */,
+				F6F0AA052688D3AD005DD566 /* EnvironmentValues_ImageCache.swift in Sources */,
 				F63CB1FA26877D1A006E142C /* AppDelegate.swift in Sources */,
 				F63CB1FC26877D1A006E142C /* SceneDelegate.swift in Sources */,
 				F6CD897926879ABD0078F670 /* ApiObjectImg.swift in Sources */,
+				F6F0AA012688CBA5005DD566 /* ImageLoader.swift in Sources */,
 				F63CB1FE26877D1A006E142C /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

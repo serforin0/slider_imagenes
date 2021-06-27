@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ApiObjectImg : Codable, Identifiable {
+struct ApiObjectImg : Codable, Identifiable, Hashable {
     
     var id: String
     var Maker: String

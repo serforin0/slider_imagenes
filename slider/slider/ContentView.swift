@@ -10,37 +10,28 @@ import SwiftUI
 
 struct ContentView: View {
     
+    //@ObservedObject var searchObjectController = SearchObjectController.shared
+    
     var repository = RepositoriImg()
     
     @State var selectTab: Int = 0
     var numrbs = [1,2,3,4,5]
-    @State var apiObjectImgs: [ApiObjectImg]? = []
+    @State var apiObjectImgs: [ApiObjectImg] = []
+    let url = URL(string: "https://image.tmdb.org/t/p/original/pThyQovXQrw2m0s9x82twj48Jq4.jpg")!
         
     
     var body: some View {
         repository.fechimg(callBack: { (data: [ApiObjectImg]?, status: Bool, message: String) -> () in
-            
             if(status){
-                self.apiObjectImgs = data
-                
+                self.apiObjectImgs = data ?? []
             }
-            
-            
-        } )
-         return TabView {
-            
-            ForEach(self.apiObjectImgs ?? []) { load  in
-                
-                AsyncImage(load.img)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .cornerRadius(0)
-//                Text(load.Id)
-            }
+        })
+        return List(self.apiObjectImgs, id: \.self) { image in
+            return AsyncImage(
+                url: image.img,
+                placeholder: { Text("Loading ...") },
+                image: { Image(uiImage: $0).resizable() })
         }
-//        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-    
-        
     }
 }
 
