@@ -1,10 +1,11 @@
 # slider_imagenes
 mostrar imagenes desde un api
 
-#Librerias
+# Librerias
+
 alamofire
 
-#pasos para ejecutar el proyecto
+# pasos para ejecutar el proyecto
 
 --- ejecutar pod init
 --- ejecutar pod install
