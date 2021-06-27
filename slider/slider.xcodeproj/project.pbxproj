@@ -24,6 +24,7 @@
 		F6F0AA012688CBA5005DD566 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F0AA002688CBA5005DD566 /* ImageLoader.swift */; };
 		F6F0AA032688CD15005DD566 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F0AA022688CD15005DD566 /* ImageCache.swift */; };
 		F6F0AA052688D3AD005DD566 /* EnvironmentValues_ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F0AA042688D3AD005DD566 /* EnvironmentValues_ImageCache.swift */; };
+		F6F0AA0726891FB9005DD566 /* ImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F0AA0626891FB9005DD566 /* ImageCarouselView.swift */; };
 		F7AADDE8F20DF5EF21BB977E /* Pods_slider_sliderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96FE042EC59A44C9876B3E8 /* Pods_slider_sliderUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		F6F0AA002688CBA5005DD566 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		F6F0AA022688CD15005DD566 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		F6F0AA042688D3AD005DD566 /* EnvironmentValues_ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValues_ImageCache.swift; sourceTree = "<group>"; };
+		F6F0AA0626891FB9005DD566 /* ImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarouselView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				F63CB20426877D1C006E142C /* LaunchScreen.storyboard */,
 				F63CB20726877D1C006E142C /* Info.plist */,
 				F63CB20126877D1C006E142C /* Preview Content */,
+				F6F0AA0626891FB9005DD566 /* ImageCarouselView.swift */,
 			);
 			path = slider;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				F6F0AA032688CD15005DD566 /* ImageCache.swift in Sources */,
 				F6F0AA052688D3AD005DD566 /* EnvironmentValues_ImageCache.swift in Sources */,
 				F63CB1FA26877D1A006E142C /* AppDelegate.swift in Sources */,
+				F6F0AA0726891FB9005DD566 /* ImageCarouselView.swift in Sources */,
 				F63CB1FC26877D1A006E142C /* SceneDelegate.swift in Sources */,
 				F6CD897926879ABD0078F670 /* ApiObjectImg.swift in Sources */,
 				F6F0AA012688CBA5005DD566 /* ImageLoader.swift in Sources */,

@@ -46,7 +46,7 @@ class ImageLoader: ObservableObject {
                                      receiveOutput: { [weak self] in self?.cache($0) },
                                      receiveCompletion: { [weak self] _ in self?.onFinish() },
                                      receiveCancel: { [weak self] in self?.onFinish() })
-            .subscribe(on: Self.imageProcessingQueue)
+            
             .receive(on: DispatchQueue.main)
             .sink { [weak self] in self?.image = $0 }
     }

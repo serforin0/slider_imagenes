@@ -8,6 +8,26 @@
 
 import SwiftUI
 
+
+struct ImageOverlay: View {
+    private var id: String
+    init(id: String) {
+        self.id = id
+    }
+    var body: some View {
+        ZStack {
+            Text(self.id)
+                .font(.callout)
+                .padding(6)
+                .foregroundColor(.white)
+        }.background(Color.black)
+        .opacity(0.8)
+        .cornerRadius(10.0)
+        .padding(20)
+        
+    }
+}
+
 struct ContentView: View {
     
     //@ObservedObject var searchObjectController = SearchObjectController.shared
@@ -17,8 +37,11 @@ struct ContentView: View {
     @State var selectTab: Int = 0
     var numrbs = [1,2,3,4,5]
     @State var apiObjectImgs: [ApiObjectImg] = []
-    let url = URL(string: "https://image.tmdb.org/t/p/original/pThyQovXQrw2m0s9x82twj48Jq4.jpg")!
+    let url = "https://image.tmdb.org/t/p/original/pThyQovXQrw2m0s9x82twj48Jq4.jpg"
         
+ 
+    
+    
     
     var body: some View {
         repository.fechimg(callBack: { (data: [ApiObjectImg]?, status: Bool, message: String) -> () in
@@ -26,12 +49,27 @@ struct ContentView: View {
                 self.apiObjectImgs = data ?? []
             }
         })
-        return List(self.apiObjectImgs, id: \.self) { image in
-            return AsyncImage(
-                url: image.img,
-                placeholder: { Text("Loading ...") },
-                image: { Image(uiImage: $0).resizable() })
-        }
+        
+        return  GeometryReader { geometry in
+            ImageCarouselView(numberOfImages: self.apiObjectImgs.count) {
+                        ForEach(self.apiObjectImgs) { apiImages in
+                         
+                           
+                                AsyncImage(
+                                    url: URL(string: apiImages.img)!,
+                                            placeholder: { Text("Loading ...") },
+                                            image: { Image(uiImage: $0).resizable() })
+                                  .scaledToFill()
+                                  .frame(width: geometry.size.width, height: geometry.size.height)
+                                  .clipped()
+                                    .overlay(ImageOverlay(id: apiImages.id), alignment: .bottom)
+                            
+                            
+                            
+                        }
+                      }
+                  }.frame(height: 900, alignment: .center)
+
     }
 }
 
