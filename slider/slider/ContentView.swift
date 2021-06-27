@@ -68,7 +68,7 @@ struct ContentView: View {
                             
                         }
                       }
-                  }.frame(height: 900, alignment: .center)
+                  }
 
     }
 }
