@@ -23,7 +23,7 @@ struct ImageCarouselView<Content: View>: View {
 
         var body: some View {
             GeometryReader { geometry in
-                // 1
+                
                 ZStack(alignment: .bottom) {
                     HStack(spacing: 0) {
                         self.content
@@ -35,11 +35,11 @@ struct ImageCarouselView<Content: View>: View {
                             self.currentIndex = (self.currentIndex + 1) % (self.numberOfImages == 0 ? 1 : self.numberOfImages)
                     }
                     
-                    // 2
+                    
                     HStack(spacing: 3) {
-                        // 3
+                        
                         ForEach(0..<self.numberOfImages, id: \.self) { index in
-                             // 4
+                             
                             Circle()
                                 .frame(width: index == self.currentIndex ? 10 : 8,
                                        height: index == self.currentIndex ? 10 : 8)
